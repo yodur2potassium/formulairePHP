@@ -1,6 +1,6 @@
 <?php
 session_start();
-var_dump($_POST);
+// var_dump($_POST);
 
 $login ="";
 $password ="";
@@ -17,10 +17,10 @@ if($login === "imie" && $password === "123456"){
   header("location: index.php");
 
 } else{
+  $_SESSION["loginErrors"] = "Mauvais Login/Pass.";
   header("location: login.php");
 }
 
 
-var_dump($login,$password);
-var_dump($_SESSION);
- ?>
+// var_dump($login,$password);
+// var_dump($_SESSION);

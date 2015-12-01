@@ -1,9 +1,5 @@
 <?php
-session_start();
-
-if($_SESSION["connected"] == false){
-  header("location: login.php");
-}
+include "functions.php";
  ?>
 
 <!DOCTYPE html>
@@ -13,6 +9,8 @@ if($_SESSION["connected"] == false){
     <title>Accueil</title>
   </head>
   <body>
+    <?php include "header.php"; ?>
     <h1>Bienvenue!</h1>
+    <a href="page2.php">Lien vers la 2eme page</a>
   </body>
 </html>

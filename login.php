@@ -1,5 +1,8 @@
 <?php
-
+session_start();
+ if (isset($_SESSION["loginErrors"])){
+  echo $_SESSION["loginErrors"];
+}
  ?>
  <!DOCTYPE html>
  <html>
@@ -15,5 +18,6 @@
        <input type="submit" name="valid" value="OK">
        </fieldset>
      </form>
+     <!-- <a href="destroy.php">Detruire la session</a> -->
  </html>
    </body>

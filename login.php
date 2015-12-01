@@ -2,9 +2,10 @@
 session_start();
  if (isset($_SESSION["loginErrors"])){
   echo $_SESSION["loginErrors"];
+  unset($_SESSION["loginErrors"]);
 }
-var_dump($_SESSION);
-var_dump($_COOKIE);
+// var_dump($_SESSION);
+// var_dump($_COOKIE);
 
  ?>
  <!DOCTYPE html>
